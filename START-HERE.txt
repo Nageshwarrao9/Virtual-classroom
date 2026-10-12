@@ -1,0 +1,17 @@
+VIRTUAL CLASSROOM AND ONLINE TUTORING SITE
+
+1. Install Node.js LTS and MongoDB.
+2. Open this folder in VS Code.
+3. Run: npm install
+4. Copy .env.example to .env
+5. Check MONGODB_URI and set a strong JWT_SECRET in .env
+6. Run: npm start
+7. Open: http://localhost:3000
+
+Demo:
+- Register as Teacher / Tutor
+- Create course, schedule class, add study material
+- Log out and register as Student
+- Enroll and view dashboard
+
+Read README.md for details and PROJECT-REPORT.md for the report.

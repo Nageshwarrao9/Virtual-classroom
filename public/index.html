@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Virtual Classroom and Online Tutoring Site" />
+  <title>LearnSpace | Virtual Classroom</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">L</span> LearnSpace</a>
+    <nav>
+      <a href="#courses">Courses</a>
+      <a href="#dashboard">Dashboard</a>
+      <button id="open-login" class="btn btn-outline">Log in</button>
+      <button id="open-register" class="btn btn-primary">Get started</button>
+      <button id="logout-btn" class="btn btn-outline hidden">Log out</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">LEARN WITHOUT LIMITS</span>
+        <h1>Your next skill starts <span>right here.</span></h1>
+        <p>Meet expert tutors, join online classes, and learn at your own pace from anywhere.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large" href="#courses">Explore courses <span>→</span></a>
+          <button class="btn btn-outline btn-large" id="hero-register">Create free account</button>
+        </div>
+        <div class="hero-stats">
+          <div><strong>Learn</strong><small>at your own pace</small></div>
+          <div><strong>Connect</strong><small>with tutors</small></div>
+          <div><strong>Grow</strong><small>your skills</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Online learning illustration">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card art-main">
+          <div class="video-top"><span class="live-dot"></span> LIVE LEARNING <span class="video-menu">•••</span></div>
+          <div class="teacher-avatar">👩‍🏫</div>
+          <h3>Learn something new</h3>
+          <p>Small steps. Big progress.</p>
+          <div class="video-controls"><span>🎙</span><span>▣</span><span class="control-play">▶</span><span>☷</span></div>
+        </div>
+        <div class="floating-note note-top">✦ <b>Keep learning</b><small>One lesson at a time</small></div>
+        <div class="floating-note note-bottom">✓ <b>Learn anywhere</b><small>Your classroom travels with you</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="section-heading">
+        <div><span class="eyebrow">FIND YOUR NEXT COURSE</span><h2>Explore popular courses</h2><p>Discover a subject and start building your future.</p></div>
+        <span class="course-count" id="course-count">Loading courses…</span>
+      </div>
+      <div id="course-list" class="course-grid"><div class="empty-state">Loading courses…</div></div>
+    </section>
+
+    <section class="section dashboard-section" id="dashboard">
+      <div class="section-heading">
+        <div><span class="eyebrow">YOUR LEARNING SPACE</span><h2 id="dashboard-title">Your dashboard</h2><p id="dashboard-subtitle">Log in to see your courses, classes, and study resources.</p></div>
+      </div>
+      <div id="dashboard-content" class="dashboard-grid">
+        <div class="dashboard-card"><div class="dash-icon">📚</div><h3>My courses</h3><p>Your enrolled or teaching courses will appear here.</p></div>
+        <div class="dashboard-card"><div class="dash-icon">🗓️</div><h3>Upcoming classes</h3><p>Keep track of your scheduled learning sessions.</p></div>
+        <div class="dashboard-card"><div class="dash-icon">📝</div><h3>Study materials</h3><p>Find notes and learning resources in one place.</p></div>
+      </div>
+    </section>
+    <section class="bottom-cta"><div><span class="eyebrow">READY TO BEGIN?</span><h2>Make today a learning day.</h2><p>Create an account to explore your virtual classroom.</p></div><button id="bottom-register" class="btn btn-light btn-large">Join LearnSpace →</button></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">L</span> LearnSpace</a><span>Virtual Classroom & Online Tutoring · FSD Lab Project</span><span>Learn • Connect • Grow</span></footer>
+
+  <div id="auth-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="close-modal" aria-label="Close">×</button>
+      <span class="eyebrow">WELCOME TO LEARNSPACE</span><h2 id="modal-title">Create your account</h2><p id="modal-description">Start learning with your community.</p>
+      <div class="auth-tabs"><button id="tab-register" class="active">Register</button><button id="tab-login">Log in</button></div>
+      <form id="auth-form">
+        <div id="name-field" class="field"><label for="auth-name">Full name</label><input id="auth-name" name="name" placeholder="e.g. Nageshwar Rao" autocomplete="name" required /></div>
+        <div class="field"><label for="auth-email">Email address</label><input id="auth-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required /></div>
+        <div class="field"><label for="auth-password">Password</label><input id="auth-password" name="password" type="password" minlength="6" placeholder="At least 6 characters" autocomplete="new-password" required /></div>
+        <div id="role-field" class="field"><label for="auth-role">I want to join as</label><select id="auth-role" name="role"><option value="student">Student</option><option value="teacher">Teacher / Tutor</option></select></div>
+        <button id="auth-submit" class="btn btn-primary btn-full" type="submit">Create account</button>
+        <p id="auth-message" class="form-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

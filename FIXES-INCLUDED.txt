@@ -1,0 +1,9 @@
+Virtual Classroom fixes included
+
+1. Deleting a course removes its ClassSession and Material records.
+2. Upcoming classes are restricted to future sessions under courses that still exist.
+3. Class listings populate course and teacher names consistently.
+4. Invalid JSON and unknown routes return clear JSON errors.
+5. README includes API and GET/POST troubleshooting steps.
+
+Run npm install, configure .env from .env.example, start MongoDB, then run npm start.
